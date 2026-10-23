@@ -1,3 +1,4 @@
 baseURL = 'https://a-vanv.github.io'
+theme = 'ananke'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'My personal website'
