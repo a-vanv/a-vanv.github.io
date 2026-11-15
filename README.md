@@ -1,5 +1,3 @@
 # a-vanv.github.io
 
-hi welcome to chillis
-
-My personal portfolio website
+This is my personal portfolio website made with the Hugo theme Papermod.
