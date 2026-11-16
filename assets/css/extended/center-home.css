@@ -19,6 +19,13 @@
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 769px) {
+  .first-entry.home-info {
+    min-height: 380px;
+    margin-bottom: 2.5rem;
+  }
+}
+
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
