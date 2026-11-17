@@ -2,6 +2,21 @@ baseURL: "https://a-vanv.github.io/"
 title: "AVV"
 theme: ["PaperMod"]
 
+menu:
+  main:
+    - identifier: game-programming
+      name: Game Programming
+      url: /game-programming/
+      weight: 10
+    - identifier: game-design
+      name: Game Design
+      url: /game-design/
+      weight: 20
+    - identifier: level-design
+      name: Level Design
+      url: /level-design/
+      weight: 30
+
 params:
   homeInfoParams:
     Title: Andrew Van Valkenburgh

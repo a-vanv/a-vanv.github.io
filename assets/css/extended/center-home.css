@@ -14,6 +14,14 @@
   justify-content: center;
 }
 
+.home-info .entry-header h1 {
+  font-size: 51px;
+}
+
+.home-info .entry-content {
+  font-size: 24px;
+}
+
 .first-entry.home-info {
   min-height: auto;
   margin-bottom: 2rem;
@@ -58,6 +66,10 @@
 
 .project-card h2 {
   margin-top: 0;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card p {
