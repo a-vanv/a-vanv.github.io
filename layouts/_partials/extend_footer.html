@@ -1,0 +1,37 @@
+<script>
+  (() => {
+    const navigation = document.querySelector(".header-nav");
+    const menu = document.getElementById("menu");
+
+    if (!navigation || !menu) return;
+
+    const toggle = document.createElement("button");
+    toggle.className = "mobile-menu-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-controls", "menu");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation menu");
+    toggle.innerHTML = '<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>';
+    navigation.insertBefore(toggle, menu);
+
+    const closeMenu = () => {
+      navigation.classList.remove("mobile-menu-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation menu");
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("mobile-menu-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+
+    menu.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+  })();
+</script>
