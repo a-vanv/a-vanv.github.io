@@ -30,3 +30,4 @@ params:
 
   defaultTheme: dark
   disableThemeToggle: true
+  mainSections: []
