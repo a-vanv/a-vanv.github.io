@@ -27,6 +27,16 @@
   margin-bottom: 2rem;
 }
 
+/* Keep the portfolio section title and introduction centered above its cards. */
+.page-header {
+  text-align: center;
+}
+
+.page-header .post-description {
+  max-width: 680px;
+  margin: 0.75rem auto 0;
+}
+
 @media screen and (min-width: 769px) {
   .first-entry.home-info {
     min-height: 380px;
