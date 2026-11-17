@@ -20,7 +20,7 @@ menu:
 params:
   homeInfoParams:
     Title: Andrew Van Valkenburgh
-    Content: Gameplay Programmer / Technical Game Designer
+    Content: Gameplay Programmer | Technical Game Designer
 
   socialIcons: # optional
     - name: "LinkedIn"
