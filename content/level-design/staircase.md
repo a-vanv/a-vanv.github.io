@@ -18,8 +18,40 @@ When players would come up these stairs, they were presented with this switchbac
 
 ![First Stairs Swtichback](/images/staircase/FirstStairs2.png)
 
-We needed a staircase design that would allow the player to see what was coming while providing them with escape routes so as not to feel trapped.
+We needed a staircase design that would allow the player to see what was coming while providing them with escape routes so as not to feel trapped and increase their agency.
 
-## Prototyping
+## Prototyping and Playtesting
 
+As a level design team, we started by finding reference for different styles of staircases that could work for our level.
 
+{{< accordion title="Gathered Reference" >}}
+
+![Ref Y Stairs](/images/staircase/YStairReference.png)
+
+![Ref Stairs Swtichback](/images/staircase/SpiralStairReference.png)
+
+![Ref Stairs 1](/images/staircase/OtherStairRef1.png)
+
+![Ref Stairs 2](/images/staircase/OtherStairRef2.png)
+
+We spent a lot of time going over Google looking for different styles of staircases. These are just a few of the ones that we considered.
+
+{{< /accordion >}}
+
+Once we had decided on two layouts, we put them into the engine and started getting playtesting data to see which people liked more. They were placed in the save level on different ends of the map to see which one players tended towards.
+
+![Y Stairs Prototype](/images/staircase/Y-Stairs.png)
+*Y-Stairs*
+
+![Spiral Stairs Prototype](/images/staircase/SpiralStairs1.png)
+*Spiral Stairs*
+
+## The Solution
+
+![Y Stairs Final Gif](/images/staircase/YStairsFinal.gif)
+
+After multiple playtests, the preferred layout became obvious. Players would almost always use the Y-stairs, even if it meant running past the spiral stairs to get there.
+
+The Y-stairs provided enough visibility to be able to see incoming enemies while also providing ways for the player to escape if an enemy started coming towards them.
+
+We implemented the Y-stairs on both sides of the map, and since then players have had no issues getting from floor to floor.
