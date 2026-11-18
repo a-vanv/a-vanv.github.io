@@ -38,6 +38,8 @@ We spent a lot of time going over Google looking for different styles of stairca
 
 {{< /accordion >}}
 
+When looking at these reference images, we kept in mind the issues with our current staircase design. We talked about which of these options would provide enough information to the player while also giving them options to escape. After much discussion, we decided on the first two images shown in the dropdown above.
+
 Once we had decided on two layouts, we put them into the engine and started getting playtesting data to see which people liked more. They were placed in the save level on different ends of the map to see which one players tended towards.
 
 ![Y Stairs Prototype](/images/staircase/Y-Stairs.png)
