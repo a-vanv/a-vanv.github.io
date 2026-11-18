@@ -4,7 +4,8 @@ summary: "Overarching AI that directs the movements of individual enemy AI's."
 hideMeta: true
 ---
 
-![Guard Image](/images/god-ai/GuardSpooky.jpeg)(/images/god-ai/GuardSpooky.jpeg)
+![Guard Image](/images/god-ai/GuardSpooky.jpeg)
+*Drawing by Callie Michaelis*
 
 ## Overview
 
@@ -83,5 +84,28 @@ For each enemy, if it's targeted waypoint location is equal to the intended new 
 
 [![Select Random Waypoint](/images/god-ai/SelectRandomWaypoint.png)](/images/god-ai/SelectRandomWaypoint.png)
 Shuffle all the waypoints passed in, and cycle through them in a for each loop. If a waypoint is not currently being targeted, return it. If all the waypoints are currently being targeted, return one at random.
+
+{{< /accordion >}}
+
+## Send Closest Guard
+
+![Send Closest Guard](/images/god-ai/DistractionAbility.gif)
+When a distraction ability is used or the Watcher spots the player, the nearest enemy needs to be identified and sent to that location. The function is provided with a location, which it uses to compare with all the other enemies in the level to figure out which is closest to the specified location. Once the closest enemy is identified, we cast to the enemy's controller and send it ot the stimulus with the specified speed modifier.
+
+### Code Breakdown
+
+{{< accordion title="Initial Event" >}}
+
+[![Send Closest Guard Event](/images/god-ai/ClosestGuardEvent.png)](/images/god-ai/ClosestGuardEvent.png)
+The process is kicked off by this event, with the location of the stimulus and the movement speed multiplier passed into the function.
+
+{{< /accordion >}}
+
+{{< accordion title="In-depth Breakdown" >}}
+
+[![Send Closest Guard](/images/god-ai/SendClosestGuard.png)](/images/god-ai/SendClosestGuard.png)
+First, the location and movement speed modifiers are set. Then, for each enemy in the level we compute its distance to the stimulus and compare that to the current shortest path. If the new path is shorter, we use this new path as the shortest path and save the enemy reference in a variable.
+
+At the end of the loop, we get the enemy's controller and tell it to go to the new stimulus with the speed multiplier specified.
 
 {{< /accordion >}}
