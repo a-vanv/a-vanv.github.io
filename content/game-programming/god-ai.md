@@ -4,7 +4,7 @@ summary: "Overarching AI that directs the movements of individual enemy AI's."
 hideMeta: true
 ---
 
-![Guard Image](/images/god-ai/GuardSpooky.jpeg)
+[![Guard Image](/images/god-ai/GuardSpooky.jpeg)](/images/god-ai/GuardSpooky.jpeg)
 
 ## Overview
 
@@ -22,16 +22,17 @@ For player abilities such as a distraction, we needed to be able to interrupt th
 
 ## Assign New Target Waypoint
 
-![Assign New Target Waypoint BP](/images/god-ai/AssignNewTargetWaypoint.png)
+[![Assign New Target Waypoint BP](/images/god-ai/AssignNewTargetWaypoint.png)](/images/god-ai/AssignNewTargetWaypoint.png)
 
 When an enemy would reach a waypoint, their state tree would ping a function that would randomly select a waypoint from those containted in their waypoint list. With this new funciton, the God AI would check if this is enemy is the one furthest from the player. If so, the enemy would get sent to the waypoint located closest to the player. If not, the God AI would pick a random waypoint from the enemy's waypoint list that no other enemy was going towards and send them there.
 
 ### Code Breakdown
 
-{{< accordion title="Code Breakdown" open="true" >}}
-
-{{< /accordion >}}
-
 {{< accordion title="Get New Target Waypoint" >}}
 
+#### Header
+This is text inside the accordion. There's also an image.
+[![Assign New Target Waypoint BP](/images/god-ai/AssignNewTargetWaypoint.png)](/images/god-ai/AssignNewTargetWaypoint.png)
+
 {{< /accordion >}}
+
