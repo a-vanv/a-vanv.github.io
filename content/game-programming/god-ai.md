@@ -51,7 +51,7 @@ Next, we want to get the waypoint list and check for edge cases. If there are no
 
 #### Direct the furthest enemy towards the player
 [![Send Furthest Guard](/images/god-ai/DirectFurthestGuard.png)](/images/god-ai/DirectFurthestGuard.png)
-If this is the furthest guard from the player, then get the nearest waypoint to the player and see if any other guard is already going there. If not, then send this enemy to it. Otherwise, remove this waypoint from the available options and continue on.
+If this is the furthest enemy from the player, then get the nearest waypoint to the player and see if any other enemy is already going there. If not, then send this enemy to it. Otherwise, remove this waypoint from the available options and continue on.
 
 #### Select random available waypoint
 [![Select Random Waypoint](/images/god-ai/SelectAvailableWaypoint.png)](/images/god-ai/SelectAvailableWaypoint.png)
@@ -62,14 +62,14 @@ If this enemy isn't the furthest from the player or there's already an enemy goi
 {{< accordion title="Is Furthest Enemy from Player" >}}
 
 [![Send Furthest Guard Function](/images/god-ai/IsFurthestFromPlayerInDepth.png)](/images/god-ai/IsFurthestFromPlayerInDepth.png)
-For each enemy, take their location on the nav mesh vs the player's location on the nav mesh and calculate how far they are apart. If that distance is greater than the current path length, then store this new path as the longest and the current enemy as the furthest. After that loop has finished, if this guard is the furthest then return true. Otherwise, return false.
+For each enemy, take their location on the nav mesh vs the player's location on the nav mesh and calculate how far they are apart. If that distance is greater than the current path length, then store this new path as the longest and the current enemy as the furthest. After that loop has finished, if this enemy is the furthest then return true. Otherwise, return false.
 
 {{< /accordion >}}
 
 {{< accordion title="Get Nearest Waypoint to the Player" >}}
 
 [![Get Closest Waypoint](/images/god-ai/GetNearestWaypoint.png)](/images/god-ai/GetNearestWaypoint.png)
-Similar to selecting the furthest guard, for each waypoint we check to see, based on the nav mesh, how far it is from the player. If it is the closest current option, it is saved and the waypoint is put into a variable. Whichever waypoint is in that variable by the end of the loop is sent off as the closest waypoint. If there is no waypoint in that final variable, an error is thrown.
+Similar to selecting the furthest enemy, for each waypoint we check to see, based on the nav mesh, how far it is from the player. If it is the closest current option, it is saved and the waypoint is put into a variable. Whichever waypoint is in that variable by the end of the loop is sent off as the closest waypoint. If there is no waypoint in that final variable, an error is thrown.
 
 {{< /accordion >}}
 
@@ -87,7 +87,7 @@ Shuffle all the waypoints passed in, and cycle through them in a for each loop. 
 
 {{< /accordion >}}
 
-## Send Closest Guard
+## Send Closest Enemy
 
 ![Send Closest Guard](/images/god-ai/DistractionAbility.gif)
 When a distraction ability is used or the Watcher spots the player, the nearest enemy needs to be identified and sent to that location. The function is provided with a location, which it uses to compare with all the other enemies in the level to figure out which is closest to the specified location. Once the closest enemy is identified, we cast to the enemy's controller and send it ot the stimulus with the specified speed modifier.
@@ -101,7 +101,7 @@ The process is kicked off by this event, with the location of the stimulus and t
 
 {{< /accordion >}}
 
-{{< accordion title="In-depth Breakdown" >}}
+{{< accordion title="Send Closest Enemy to Location" >}}
 
 [![Send Closest Guard](/images/god-ai/SendClosestGuard.png)](/images/god-ai/SendClosestGuard.png)
 First, the location and movement speed modifiers are set. Then, for each enemy in the level we compute its distance to the stimulus and compare that to the current shortest path. If the new path is shorter, we use this new path as the shortest path and save the enemy reference in a variable.
