@@ -8,10 +8,11 @@ menu:
       name: Game Programming
       url: /game-programming/
       weight: 10
-    - identifier: game-design
-      name: Game Design
-      url: /game-design/
-      weight: 20
+    # Temporarily hidden until the section has content.
+    # - identifier: game-design
+    #   name: Game Design
+    #   url: /game-design/
+    #   weight: 20
     - identifier: level-design
       name: Level Design
       url: /level-design/

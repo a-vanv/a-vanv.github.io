@@ -9,7 +9,9 @@ hideMeta: true
 
 ## Overview
 
-I was tasked with creating a God AI for our video game capstone project that would direct the movements of up to 3 individual enemy AI's. Our game, Lantern of Souls, is a third-person horror-stealth game, so enemy interactions are a key part of the core gameplay. We were having an issue where the enemies were bunching up and overwhelming the player, or were always on the other side of the map and never once interacted with the player. To remedy this, we decided to implement a "God AI," similar to what was used in Alien: Isolation, to direct the movements of the enemies and push them in the direction of the player without being overwhelming. It would also allow us to interrupt the normal enemy behaviors to send them to a specific location when needed, such as when the player uses a distraction ability.
+I was tasked with creating a God AI for our video game capstone project that would direct the movements of up to 3 individual enemy AI's. Our game, Lantern of Souls, is a third-person horror-stealth game, so enemy interactions are a key part of the core gameplay.
+
+We were having an issue where the enemies were bunching up and overwhelming the player, or were always on the other side of the map and never once interacted with the player. To remedy this, we decided to implement a "God AI," similar to what was used in Alien: Isolation, to direct the movements of the enemies and push them in the direction of the player without being overwhelming. It would also allow us to interrupt the normal enemy behaviors to send them to a specific location when needed, such as when the player uses a distraction ability.
 
 *For all code shown, overall design and inital prototyping was done by myself, but code cleanup and refactoring were done with the help of Jacob Memmott.*
 
