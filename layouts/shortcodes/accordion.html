@@ -1,0 +1,6 @@
+<details class="content-accordion"{{ if eq (.Get "open") "true" }} open{{ end }}>
+  <summary>{{ .Get "title" }}</summary>
+  <div class="content-accordion__body">
+    {{ .Inner | .Page.RenderString }}
+  </div>
+</details>
